@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="web.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="search-area">
+                <input type="text" id="locationInput" placeholder="Search for location">
+                <button onclick="getWeather()">Search</button>
+            </div>
+            <div class="popular-cities">
+                <h3>Popular Cities</h3>
+                <ul>
+                    <li onclick="getWeather('Delhi')">Delhi</li>
+                    <li onclick="getWeather('Mumbai')">Mumbai</li>
+                    <li onclick="getWeather('Hyderabad')">Hyderabad</li>
+                    <li onclick="getWeather('Bangalore')">Bangalore</li>
+                    <li onclick="getWeather('Kolkata')">Kolkata</li>
+                </ul>
+            </div>
+            <div class="recent-searches">
+                <h3>Recent Searches</h3>
+                <ul id="recentSearches">
+                    <!-- Recent searches will be displayed here -->
+                </ul>
+            </div>
+        </div>
+        <div class="main-content">
+            <h1 class="main-heading">Weather Information</h1>
+            <div class="current-weather" id="currentWeather">
+                <!-- Current weather information will be displayed here -->
+            </div>
+            <div class="map" id="map" style="height: 200px;">
+                <!-- Map will be displayed here -->
+            </div>
+            <div class="forecast" id="forecast">
+                <!-- Forecast information will be displayed here -->
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="web.js"></script>
+</body>
+</html>
